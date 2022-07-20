@@ -1,25 +1,71 @@
 body {
-	margin:	 	0px;
+	margin:	 	10px;
 	background:	black;
 	color:		white;
 }
 
-#mainArea {
-	padding: 5px;
-	border: 1px;
+#controlDiv {
+	display: table;
+	padding: 	5px;
 	position: 	relative;
-	top: 0;
-	left: 0;
-	border-color: grey;
+	
+}
+
+.selectDiv {
+	margin-left: 10px;
+	float: left;
+	padding: 				10px 15px;
+	border: 				3px solid;
+	border-radius: 			10px;
+	border-color: 			grey;
+	color: 					white;
+}
+
+#mainArea {
+	padding: 	0px;
+	position: 	relative;
+	top: 		0;
+	left: 		0;
+}
+
+.input {
+	background-color: 	grey;
+	color: 				white;
+	width: 40px;
+
+}
+
+
+
+.button {
+	float: left;
+	background-color: 		grey;
+	padding: 				10px 15px;
+	border: 				3px solid;
+	border-radius: 			10px;
+	border-color: 			grey;
+	color: 					white;
+	transition-duration: 	0.5s;
+}
+
+.button:hover {
+	background-color: black;
 }
 
 .pizzaPie {
 	float: left;
 	padding: 		10px;
-	border:  		1px;
+	border:  		5px;
 	margin:			2px;
 	border-style: 	solid;
-	border-color: grey;
+	border-color:	grey;
+	border-radius: 	15px;
 	width: 			fit-content;
+	height: 		fit-content;
 	
+}
+
+.bestPricePie {
+	background-color: 	limegreen;
+	color: 				black;
 }

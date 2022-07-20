@@ -2,8 +2,6 @@
 let pieCount		= 0;
 
 
-
-
 function newPie(){
 	//creates a NewPie box
 	++pieCount;
@@ -14,10 +12,10 @@ function newPie(){
 	newPieElement = document.getElementById(newDivName);
 
 	//data Entry Area
-	newPieElement.innerHTML += "<table><tr><td>Size(inches)</td><td></td></tr><tr><td>Cost($)</td><td></td></tr></table>"
+	newPieElement.innerHTML += "<table><tr><td>Size(inches)</td><td><input type=\"number\" step=\"1\" class=\"input\" id=\"size" + newDivName + "\"></td></tr><tr><td>Cost($)</td><td><input type=\"number\" step=\"0.01\" class=\"input\" id=\"price" + newDivName + "\"></td></tr></table>"
 
 	//close button
-	newPieElement.innerHTML += '<button class="pieButton" onClick="this.parentElement.remove()">Remove</button>';
+	newPieElement.innerHTML += '<button class="button" onClick="this.parentElement.remove()">Remove</button>';
 
 }//end drawBlueBox()
 
