@@ -1,0 +1,25 @@
+body {
+	margin:	 	0px;
+	background:	black;
+	color:		white;
+}
+
+#mainArea {
+	padding: 5px;
+	border: 1px;
+	position: 	relative;
+	top: 0;
+	left: 0;
+	border-color: grey;
+}
+
+.pizzaPie {
+	float: left;
+	padding: 		10px;
+	border:  		1px;
+	margin:			2px;
+	border-style: 	solid;
+	border-color: grey;
+	width: 			fit-content;
+	
+}
