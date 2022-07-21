@@ -9,7 +9,7 @@ function newPie(){
 	++pieCount;
 	newDivName = "Pie" + pieCount.toString();
 	newPieDiv  = '<div class="pizzaPie" id=' + newDivName + '></div>';
-	document.getElementById("mainArea").innerHTML += newPieDiv;
+	document.getElementById("mainArea").insertAdjacentHTML('beforeend',newPieDiv);
 
 	newPieElement = document.getElementById(newDivName);
 
