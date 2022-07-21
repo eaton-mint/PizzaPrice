@@ -1,6 +1,5 @@
-
-let pieCount		= 0;
-let daemonActive	= false;
+let pieCount			= 0;
+let daemonActive		= false;
 
 
 
@@ -23,8 +22,10 @@ function newPie(){
 	newPieElement.innerHTML += '<button class="button" onClick="this.parentElement.remove()">Remove</button>';
 
 	//check to see if calculate daemon already created
-	if(daemonActive){
+	if(!daemonActive){
 		//create daemon
+		calculationInterval = setInterval(calculatePrices, 500);
+		daemonActive = true;
 	} 
 	
 }//end newPie()
@@ -37,7 +38,11 @@ function calculatePrices(){
 	let allPies   = document.getElementsByClassName("pizzaPie");
 	let allPrices = [];
 
-	if(allPies.length !=0){
+	if(allPies.length ==0){
+		clearInterval(calculationInterval);
+		daemonActive = false;
+		return 0;
+	}else{
 		for(let i =0; i < allPies.length; i++){
 		//iterate over list of these pie divs
 			
