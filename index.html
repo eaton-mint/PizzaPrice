@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>JS_Cost</title>
+	<link rel="stylesheet" href="pizza_price.css">
+</head>
+
+<body>
+	
+	
+	<div id="controlDiv">
+		<button id="buttonNewPie" class="button" onClick="newPie()">New Pie</button>
+		<!-- Sort dropdown -->
+		<div class="selectDiv">
+			<label>Sort Options</label>
+			<select name="sortOptions" id="sortOptions">
+				<option value="blank">     </option>
+				<option value="cheapest">Price per area</option>
+				<option value="smallest">Size, smallest-> largest</option>
+			</select>
+		</div>
+	</div>
+	
+	<div id="mainArea"></div>
+		
+	<script src="pizza_price.js"></script> 
+</body>
+</html>
