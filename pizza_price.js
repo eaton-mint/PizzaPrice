@@ -13,10 +13,17 @@ function newPie(){
 	newPieElement = document.getElementById(newDivName);
 
 	//data Entry Area
-	newPieElement.innerHTML += "<table><tr><td>Diameter(inches)</td><td><input type=\"number\" step=\"1\" class=\"input\" id=\"size" + newDivName + "\"></td></tr><tr><td>Cost($)</td><td><input type=\"number\" step=\"0.01\" class=\"input\" id=\"price" + newDivName + "\"></td></tr></table>"
+	newPieElement.innerHTML += "<table id=\"table" + newDivName + "\"></table>";
+	pieDataTable = document.getElementById("table" + newDivName);
 
+	//size
+	pieDataTable.innerHTML += "<tr><td>Diameter(inches)</td><td><input type=\"number\" step=\"1\" class=\"input\" id=\"size" + newDivName + "\"></td></tr>";
+	
+	//cost
+	pieDataTable.innerHTML += "<tr><td>Cost($)</td><td><input type=\"number\" step=\"0.01\" class=\"input\" id=\"price" + newDivName + "\"></td></tr>";
+	
 	//result area
-	newPieElement.innerHTML += "<div id=\"result" + newDivName + "\">  </div>  "
+	pieDataTable.innerHTML += "<tr><td>Price/Sq.In.</td><td><label id=\"result" + newDivName + "\"></label></td></tr>";
 
 	//close button
 	newPieElement.innerHTML += '<button class="button" onClick="this.parentElement.remove()">Remove</button>';
@@ -59,15 +66,14 @@ function calculatePrices(){
 				let costResult = price / pieArea;
 
 				//write this calculated value to output element
-				document.getElementById("result" + currentPie).innerHTML = "Price/Sq.In. = $" + String(costResult.toFixed(2));
+				document.getElementById("result" + currentPie).innerHTML = "$" + String(costResult.toFixed(2));
 				allPrices[i] = costResult;
 			} else {
-				document.getElementById("result" + currentPie).innerHTML = "Price/Sq.In. = $ 0.00";
+				document.getElementById("result" + currentPie).innerHTML = "$0.00";
 				allPrices[i] = 0;
 			}
 		}
 	}
-
 	//find best price
 	highlightLowestPrice(allPies, allPrices);
 }//end calculatePrices()
@@ -99,5 +105,4 @@ function highlightLowestPrice(pies, prices){
 			pies[i].classList.remove("bestPricePie")
 		}
 	}
-
 }//end highlightLowestPrice()
